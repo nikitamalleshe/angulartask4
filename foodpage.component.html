@@ -1,0 +1,53 @@
+<div class="popular">
+  <h3>Popular dishes</h3>
+</div>
+
+<div class="card-group">
+  <div class="card">
+    <img src="../assets/bur.png" class="card-img-top"
+      alt="Hollywood Sign on The Hill" />
+    <div class="card-body">
+      <h5 class="card-title"><div> <img src="../assets/rate.png"></div> </h5>
+      <h5 class="card-title">Fish Burger</h5>
+    
+     <b> <h5 class="card-title">$5.59</h5></b>
+      <p class="card-text">
+       
+      </p>
+      
+    </div>
+  </div>
+  <div class="card1">
+    <img src="../assets/bur1.png" class="card-img-top"
+      alt="Palm Springs Road" />
+    <div class="card-body">
+      <h5 class="card-title"><div> <img src="../assets/rate.png"></div> </h5>
+      <h5 class="card-title">Beef Burger</h5>
+      <h5 class="card-title">$5.59</h5>
+      <p class="card-text">
+      
+    </div>
+  </div>
+  <div class="card3">
+    <img src="../assets/bur3.png" class="card-img-top"
+       />
+    <div class="card-body">
+      <h5 class="card-title"><div> <img src="../assets/rate.png"></div> </h5>
+      <h5 class="card-title">Cheese Burger</h5>
+      <h5 class="card-title">$5.59</h5>
+      <p class="card-text">
+        <div class="card">
+        
+            <div  class="card4">
+              <div class="card-title d-flex justify-content-start align-items-left style">
+              <div *ngFor="let food  of foods">  
+                <img [src]="food.image">
+               <p> <b>{{food.dish}}</b></p> 
+
+               <p>  {{food.rate}}</p>
+
+             <p>{{food.min}}</p>
+                  </div>
+            </div>
+    </div>
+  

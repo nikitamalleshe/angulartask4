@@ -1,0 +1,123 @@
+
+<div class="card">
+          <div class="card-body">  
+              <div class ="box">
+                <img src="../assets/a2.png">
+              </div>
+              <div class="box1">
+                <img src="../assets/a1.png">
+              </div>
+                 
+          </div>
+             <div class="card-title d-flex justify-content-start align-items-center " style="margin-left: 110px;">  
+           <div *ngFor="let data of data">   
+          <div class="a1">
+            <b> {{data.add}}</b>
+          </div>
+          <div class="a2">
+             <p>{{data.role}}</p>
+             </div>
+        
+             
+              <div class="btn">
+              <button type="button" class="btn btn-outline-warning" (click)="chnage()">Change</button> 
+              </div>
+              <div class="btn1">
+              <button type="button" class="btn btn-outline-secondary" (click)="adddetails()">Add Details</button>
+            </div>
+            <div class="btn2">
+              <button type="button" class="btn btn-outline-secondary" (click)="addnote()"> Add Note</button>
+            
+            </div>
+            <div class="card-body">  
+              <div class ="menu">
+              <h4 class="card-title d-flex justify-content-start align-items-center mt-3 p-2 fw-bold fs-4"  
+              style="margin-left: 90px;" text-muted>Order Menu</h4>  
+            </div>
+            <div class="check ">
+               <img src="../assets/pizza1.png" height="60px">
+            </div>
+           <div class="b">
+          <span class="d-flex justify-content-start ">{{data.pizza}}</span>  
+          <div class="b1">
+               <span class="d-flex justify-content-start text-muted">+ $5.59</span> 
+            </div> 
+           <div class="check1">
+           <img src="../assets/burger1.png" height="60px">  
+          </div>
+            <div class="c">
+           <span class="d-flex justify-content-start ">{{data.burger}}</span>
+            </div>
+            <div class="c1">
+           <span class="d-flex justify-content-start text-muted">+ $5.59  </span>
+          </div>
+           </div>
+           <div class="check3">
+            <img src="../assets/burger.png" height="60px">  
+           </div>
+             <div class="d">
+            <span class="d-flex justify-content-start" >{{data.burger1}}</span>
+             </div>
+             <div class="d1">
+            <span class="d-flex justify-content-start text-muted">+ $5.59</span>
+          </div>
+            </div>
+          </div> 
+          <div class="btn4">
+            <div class="coupon-popup" *ngIf="showCouponPopup">
+              <h3>Select Coupon</h3>           
+              <div *ngFor="let coupon of couponCodes" class="coupon-item">
+                <span class="coupon-name">{{ coupon.name }}</span>
+                <span class="coupon-discount">{{ coupon.discount }}% off</span>
+                <button class="apply-button" (click)="handleCouponSelect(coupon)">Apply</button>
+              </div>
+            
+              <button class="apply-coupon-button" (click)="handleApplyCoupon()">
+                Apply Coupon
+              </button>
+            </div>
+          <div class="coupon-section">
+            <button class="coupon-button" (click)="showCouponPopup = true">
+             coupon code?
+            </button>
+          </div>
+          
+        </div>
+        <div class="checkout-button">
+          <button class="checkout-button"  (click)="showCheckoutPopup=true">
+            Checkout
+          </button>
+        </div>
+          <div class="checkout-popup"  *ngIf="showCheckoutPopup">
+              <h2>Checkout</h2>
+              <div class="items">
+                <div *ngFor="let item of items; let i = index" class="item">
+                  <div class="item-name">{{ item.name }}</div>
+                  <div class="item-price">${{ item.price.toFixed(2) }}</div>
+                </div>
+              </div>
+              <div class="total">
+                <div class="total-label">Total</div>
+                <div class="total-amount">${{ totalAmount.toFixed(2) }}</div>
+              </div>
+              <div class="coupon-applied">Coupon Applied: SPECIAL25</div>
+              <div class="payment-methods">
+                <div class="method">Cash on Delivery</div>
+                <div class="method">Online Payment</div>
+              </div>
+             
+              <button class="close-button" (click)="onClose()">Close</button>
+            
+            </div>
+          </div>
+
+    
+              </div>
+
+
+
+   
+ 
+    
+  
+   

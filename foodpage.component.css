@@ -1,0 +1,49 @@
+.popular{
+    margin-left: 300px;
+}
+
+.card{
+    position: absolute;
+width: 272px;
+height: 180px;
+left: 417px;
+top: 781px;
+margin-left: -100px;
+margin-top:  -150px;
+}
+.card1{
+    position: absolute;
+width: 272px;
+height: 191px;
+left: 1041px;
+top: 781px;
+margin-left: -350px;
+margin-top:  -150px;
+}
+.card3{
+    position: absolute;
+width: 286px;
+height: 205px;
+left: 1121px;
+top: 768px;
+margin-left: -120px;
+margin-top:  -150px;
+}
+.card-body2{
+  
+    margin-left: 250px;
+    margin-top: -90px;
+}
+.card4{
+    margin-right: 100px;
+    align-items: left;
+    margin-left: -1000px;
+    margin-top: -300px;
+       
+   
+
+}
+
+   
+  
+
